@@ -1,0 +1,6 @@
+--Tasks--
+Components needed:
+Game Loop[x]
+Game Mechanics
+Graphics (Research Python Window Lib)
+Keyboard Controls
