@@ -1,0 +1,42 @@
+import time
+from threading import Thread
+
+class TetrisGame(object):
+    
+    def run(self):
+        running = True
+        print("Hello, World!")
+        lastTime = time.time_ns()
+        unprocessed = 0
+        nsPerTick = 1000000000.0 / 60
+        ticks = 0
+        frames = 0
+        lastTimer1 = 0
+        
+        while (running):
+            now = time.time_ns()
+            unprocessed += (now - lastTime) / nsPerTick
+            lastTime = time.time_ns()
+            shouldRender = True
+            while (unprocessed >= 1):
+                ticks += 1
+                unprocessed -= 1
+            
+            if (shouldRender):
+                frames += 1
+            
+            if int(time.time()*1000.0) - lastTimer1 > 1000:
+                lastTimer1 += 1000
+                print("ticks: " + str(ticks)  + ", fps: " + str(frames))
+                frames = 0
+                ticks = 0
+            time.sleep(2)
+            running = False
+        
+    def tick(self):
+    
+    def render(self):
+        
+if __name__ == '__main__':
+    app = TetrisGame()
+    app.run()

@@ -1,0 +1,21 @@
+import time
+
+class TetrisGame(object):
+    
+    def run(self):
+        running = True
+        print("Hello, World!")
+        lastTime = time.time_ns()
+        unprocessed = 0
+        nsPerTick = 1000000000.0 / 60
+        frames = 0
+        lastTimer1 = 0
+        
+        while (running):
+            now = time.time_ns()
+            break
+        
+
+if __name__ == '__main__':
+    app = TetrisGame()
+    app.run()
