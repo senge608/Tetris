@@ -1,0 +1,11 @@
+import time
+
+class TetrisGame(object):
+    def run(self):
+        print("Hello, World!")
+        lastTime = 
+        
+
+if __name__ == '__main__':
+    app = TetrisGame()
+    app.run()
